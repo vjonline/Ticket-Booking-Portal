@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings - TicketHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" style="text-decoration: none;"><div class="logo">TicketHub</div></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="my-bookings.html" class="active" aria-current="page">My Bookings</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="events-section">
+        <div class="container">
+            <h1>My Bookings</h1>
+            <div id="bookingsEmpty" style="display:none; text-align:center; color:#b0b0b0; margin:2rem 0;">No bookings yet. Browse <a href="events.html" style="color:#3498db; text-decoration: underline;">events</a> to get started.</div>
+            <div class="events-grid" id="bookingsGrid"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Ticketing system</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

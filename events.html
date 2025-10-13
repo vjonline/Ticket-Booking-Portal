@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - TicketHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" style="text-decoration: none;"><div class="logo">TicketHub</div></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="my-bookings.html">My Bookings</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="events-section">
+        <div class="container">
+            <h1>Browse Events</h1>
+            
+            <div class="filter-bar">
+                <button class="filter-btn active" data-category="all">All Events</button>
+                <button class="filter-btn" data-category="music">Music</button>
+                <button class="filter-btn" data-category="movies">Movies</button>
+                <button class="filter-btn" data-category="other">Other</button>
+            </div>
+
+            <div class="events-grid" id="eventsGrid">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Ticketing system</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,913 @@
+about.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TicketHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" style="text-decoration: none;"><div class="logo">TicketHub</div></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="events-section">
+        <div class="container">
+            <div class="details-card">
+                <h1>About TicketHub</h1>
+                <div class="details-info">
+                    <div class="info-item">
+                        <p>TicketHub is your premier destination for booking tickets to the most exciting events in town. From electrifying music concerts to blockbuster movie premieres, from thrilling sports championships to captivating theater performances - we bring you access to it all.</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Our Mission</h3>
+                        <p>To make event booking simple, fast, and accessible for everyone. We believe that great experiences should be just a click away.</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Why Choose Us?</h3>
+                        <p><strong>Wide Selection:</strong> Browse through hundreds of events across multiple categories including music, movies, sports, theater, and more.</p>
+                        <p><strong>Easy Booking:</strong> Our streamlined booking process makes it quick and hassle-free to secure your tickets.</p>
+                        <p><strong>Secure Platform:</strong> Your data and bookings are safe with us.</p>
+                        <p><strong>Best Prices:</strong> Competitive pricing on all events.</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>What We Offer</h3>
+                        <p>• Music concerts and festivals featuring top artists</p>
+                        <p>• Latest movie releases and special screenings</p>
+                        <p>• Theater plays and stand-up comedy shows</p>
+                        <p>• Sports events and championships</p>
+                        <p>• Art exhibitions and cultural events</p>
+                    </div>
+                </div>
+                <a href="events.html" class="btn btn-primary">Browse Events</a>
+            </div>
+        </div>
+    </section>
+
+
+booking.html: 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets - TicketHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" style="text-decoration: none;"><div class="logo">TicketHub</div></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="booking-section">
+        <div class="container">
+            <h1>Book Your Tickets</h1>
+            
+            <div class="booking-card">
+                <div class="event-summary" id="eventSummary">
+                </div>
+
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tickets">Number of Tickets</label>
+                        <input type="number" id="tickets" min="1" max="10" value="1" required>
+                    </div>
+
+                    <div class="form-group date-input-container">
+                        <label for="date">Select Date</label>
+                        <input type="date" id="date" class="custom-date-input" required> 
+                        <span class="error-message" id="dateError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Confirm Booking</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TicketHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+confirmation.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed - TicketHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" style="text-decoration: none;"><div class="logo">TicketHub</div></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="confirmation-section">
+        <div class="container">
+            <div class="confirmation-card">
+                <div class="success-icon">✓</div>
+                <h1>Booking Confirmed!</h1>
+                <p>Your tickets have been successfully booked</p>
+                
+                <div class="booking-summary" id="bookingSummary">
+                </div>
+
+                <div class="action-buttons">
+                    <a href="events.html" class="btn btn-primary">Book More Events</a>
+                    <a href="index.html" class="btn btn-secondary">Go to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TicketHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+contact.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TicketHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" style="text-decoration: none;"><div class="logo">TicketHub</div></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="booking-section">
+        <div class="container">
+            <h1>Contact Us</h1>
+            
+            <div class="booking-card">
+                <h2>Get in Touch</h2>
+                <div class="details-info">
+                    <div class="info-item">
+                        <strong>Email:</strong> utkarshsrivastava.1392006@gmail.com
+                    </div>
+                    <div class="info-item">
+                        <strong>Phone:</strong> +91 9956498XXX
+                    </div>
+                    <div class="info-item">
+                        <strong>Address:</strong> 123 Event Street, Mumbai, Maharashtra 400001, India
+                    </div>
+                    <div class="info-item">
+                        <strong>Business Hours:</strong> Monday - Sunday, 9:00 AM - 9:00 PM
+                    </div>
+                </div>
+
+                <form class="booking-form" onsubmit="event.preventDefault(); alert('Thank you for contacting us! We will get back to you soon.'); this.reset();">
+                    <h3>Send us a Message</h3>
+                    
+                    <div class="form-group">
+                        <label for="contactName">Name</label>
+                        <input type="text" id="contactName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactEmail">Email</label>
+                        <input type="email" id="contactEmail" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" style="padding: 12px; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem; font-family: inherit; resize: vertical;" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TicketHub. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+event-details.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details - TicketHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" style="text-decoration: none;"><div class="logo">TicketHub</div></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="event-details">
+        <div class="container">
+            <div class="details-card" id="eventDetails">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TicketHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+events.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - TicketHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" style="text-decoration: none;"><div class="logo">TicketHub</div></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="events-section">
+        <div class="container">
+            <h1>Browse Events</h1>
+            
+            <div class="filter-bar">
+                <button class="filter-btn active" data-category="all">All Events</button>
+                <button class="filter-btn" data-category="music">Music</button>
+                <button class="filter-btn" data-category="movies">Movies</button>
+                <button class="filter-btn" data-category="other">Other</button>
+            </div>
+
+            <div class="events-grid" id="eventsGrid">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TicketHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+faq.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - TicketHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" style="text-decoration: none;"><div class="logo">TicketHub</div></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="events-section">
+        <div class="container">
+            <div class="details-card">
+                <h1>Frequently Asked Questions</h1>
+                <div class="details-info">
+                    <div class="info-item">
+                        <h3>How do I book tickets?</h3>
+                        <p>Simply browse our events page, select your preferred event, click on it to view details, then click the "Book Now" button. Fill in your information, select your date and number of tickets, and confirm your booking.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>Can I cancel or modify my booking?</h3>
+                        <p>Once a booking is confirmed, it cannot be cancelled or modified through the website. Please contact our customer support for assistance.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>What payment methods do you accept?</h3>
+                        <p>We accept all major credit cards, debit cards, UPI, net banking, and popular digital wallets.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>How will I receive my tickets?</h3>
+                        <p>After successful booking, you will receive an email confirmation with your e-tickets attached. You can also download them from your booking confirmation page.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>Can I book tickets for past dates?</h3>
+                        <p>No, you can only select current or future dates when booking tickets. The system will show an error if you try to select a past date.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>How many tickets can I book at once?</h3>
+                        <p>You can book between 1 to 10 tickets per transaction for any event.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>Are the prices inclusive of all taxes?</h3>
+                        <p>Yes, all prices displayed on our website are final and inclusive of applicable taxes.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>What if an event gets cancelled?</h3>
+                        <p>In case of event cancellation, you will be notified via email and receive a full refund within 7-10 business days.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>Do I need to print my tickets?</h3>
+                        <p>No, you can show your e-tickets on your mobile device at the venue. However, some venues may require printed tickets, so please check the event details.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3>Still have questions?</h3>
+                        <p>Feel free to <a href="contact.html" style="color: #3498db; text-decoration: underline;">contact us</a> and our support team will be happy to help you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TicketHub. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+index.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicketHub - Book Your Events</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" style="text-decoration: none;"><div class="logo">TicketHub</div></a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Book Your Favorite Events</h1>
+            <p>Discover amazing concerts, movies, sports events and more</p>
+            <a href="events.html" class="btn btn-primary">Explore Events</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose TicketHub?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎵</div>
+                    <h3>Music Events</h3>
+                    <p>Live concerts and music festivals</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎬</div>
+                    <h3>Movies</h3>
+                    <p>Latest blockbusters and premieres</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎭</div>
+                    <h3>Other Events</h3>
+                    <p>Theater, sports, and special events</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TicketHub. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+script.js:
+const events = [
+    {
+        id: 1,
+        name: "Rock Music Festival",
+        category: "music",
+        description: "Join us for an electrifying night of rock music featuring top bands from around the world",
+        price: 2500,
+        icon: "🎸"
+    },
+    {
+        id: 2,
+        name: "Jazz Night Live",
+        category: "music",
+        description: "Experience smooth jazz performances by renowned artists in an intimate setting",
+        price: 1800,
+        icon: "🎺"
+    },
+    {
+        id: 3,
+        name: "Classical Symphony",
+        category: "music",
+        description: "An evening of classical masterpieces performed by the city orchestra",
+        price: 2200,
+        icon: "🎻"
+    },
+    {
+        id: 4,
+        name: "Pop Concert Spectacular",
+        category: "music",
+        description: "The biggest pop stars perform their chart-topping hits live",
+        price: 3000,
+        icon: "🎤"
+    },
+    {
+        id: 5,
+        name: "Action Movie Premiere",
+        category: "movies",
+        description: "Be the first to watch the most anticipated action blockbuster of the year",
+        price: 500,
+        icon: "🎬"
+    },
+    {
+        id: 6,
+        name: "Comedy Film Screening",
+        category: "movies",
+        description: "Laugh out loud with this hilarious comedy featuring top comedians",
+        price: 400,
+        icon: "🎭"
+    },
+    {
+        id: 7,
+        name: "Horror Movie Marathon",
+        category: "movies",
+        description: "A spine-chilling collection of the scariest horror movies back to back",
+        price: 800,
+        icon: "👻"
+    },
+    {
+        id: 8,
+        name: "Romantic Drama",
+        category: "movies",
+        description: "A heartwarming love story that will touch your soul",
+        price: 450,
+        icon: "💕"
+    },
+    {
+        id: 9,
+        name: "Theater Play: Shakespeare",
+        category: "other",
+        description: "Classic Shakespearean drama performed by award-winning theater company",
+        price: 1500,
+        icon: "🎭"
+    },
+    {
+        id: 10,
+        name: "Stand-up Comedy Show",
+        category: "other",
+        description: "Hilarious stand-up performances by top comedians of the country",
+        price: 1200,
+        icon: "😂"
+    },
+    {
+        id: 11,
+        name: "Football Championship",
+        category: "other",
+        description: "Watch the thrilling championship match between top teams",
+        price: 2800,
+        icon: "⚽"
+    },
+    {
+        id: 12,
+        name: "Art Exhibition",
+        category: "other",
+        description: "Explore stunning contemporary art from renowned artists worldwide",
+        price: 350,
+        icon: "🎨"
+    }
+];
+
+function renderEvents(category = 'all') {
+    const eventsGrid = document.getElementById('eventsGrid');
+    if (!eventsGrid) return;
+
+    const filteredEvents = category === 'all' 
+        ? events 
+        : events.filter(event => event.category === category);
+
+    eventsGrid.innerHTML = filteredEvents.map(event => `
+        <div class="event-card" onclick="viewEventDetails(${event.id})">
+            <div class="event-image">${event.icon}</div>
+            <div class="event-content">
+                <span class="event-category">${event.category}</span>
+                <h3>${event.name}</h3>
+                <p>${event.description}</p>
+                <div class="event-price">Rs. ${event.price}</div>
+            </div>
+        </div>
+    `).join('');
+}
+
+function setupFilters() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            const category = this.getAttribute('data-category');
+            renderEvents(category);
+        });
+    });
+}
+
+function viewEventDetails(eventId) {
+    localStorage.setItem('selectedEventId', eventId);
+    window.location.href = 'event-details.html';
+}
+
+function displayEventDetails() {
+    const eventId = parseInt(localStorage.getItem('selectedEventId'));
+    const event = events.find(e => e.id === eventId);
+    const detailsContainer = document.getElementById('eventDetails');
+    
+    if (!event || !detailsContainer) {
+        if (detailsContainer) {
+            detailsContainer.innerHTML = '<p>Event not found</p>';
+        }
+        return;
+    }
+
+    detailsContainer.innerHTML = `
+        <div class="event-image" style="height: 300px; font-size: 6rem;">${event.icon}</div>
+        <h1>${event.name}</h1>
+        <span class="event-category">${event.category}</span>
+        <div class="details-info">
+            <div class="info-item"><strong>Description:</strong> ${event.description}</div>
+            <div class="info-item"><strong>Category:</strong> ${event.category.charAt(0).toUpperCase() + event.category.slice(1)}</div>
+            <div class="info-item"><strong>Price:</strong> <span style="color: #27ae60; font-size: 1.5rem;">Rs. ${event.price}</span></div>
+        </div>
+        <button class="btn btn-primary" onclick="goToBooking()">Book Now</button>
+        <button class="btn btn-secondary" onclick="history.back()" style="margin-left: 10px;">Back to Events</button>
+    `;
+}
+
+function goToBooking() {
+    window.location.href = 'booking.html';
+}
+
+function displayBookingSummary() {
+    const eventId = parseInt(localStorage.getItem('selectedEventId'));
+    const event = events.find(e => e.id === eventId);
+    const summaryContainer = document.getElementById('eventSummary');
+    
+    if (!event || !summaryContainer) return;
+
+    summaryContainer.innerHTML = `
+        <h2>${event.name}</h2>
+        <p><strong>Category:</strong> ${event.category.charAt(0).toUpperCase() + event.category.slice(1)}</p>
+        <p><strong>Price per ticket:</strong> Rs. ${event.price}</p>
+    `;
+}
+
+function getTodayDate() {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+}
+
+function setupBookingForm() {
+    const form = document.getElementById('bookingForm');
+    const dateInput = document.getElementById('date');
+    const dateError = document.getElementById('dateError');
+    
+    if (!form || !dateInput) return;
+
+    dateInput.setAttribute('min', getTodayDate());
+
+    dateInput.addEventListener('change', function() {
+        const selectedDate = new Date(this.value);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        
+        if (selectedDate < today) {
+            dateError.textContent = 'Error: Cannot select a past date. Please choose today or a future date.';
+            this.value = '';
+        } else {
+            dateError.textContent = '';
+        }
+    });
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const selectedDate = new Date(dateInput.value);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        
+        if (selectedDate < today) {
+            dateError.textContent = 'Error: Cannot select a past date. Please choose today or a future date.';
+            return;
+        }
+
+        const bookingData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            tickets: document.getElementById('tickets').value,
+            date: dateInput.value,
+            eventId: localStorage.getItem('selectedEventId')
+        };
+
+        localStorage.setItem('bookingData', JSON.stringify(bookingData));
+        window.location.href = 'confirmation.html';
+    });
+}
+
+function displayConfirmation() {
+    const summaryContainer = document.getElementById('bookingSummary');
+    if (!summaryContainer) return;
+
+    const bookingData = JSON.parse(localStorage.getItem('bookingData'));
+    const eventId = parseInt(bookingData.eventId);
+    const event = events.find(e => e.id === eventId);
+
+    if (!bookingData || !event) {
+        summaryContainer.innerHTML = '<p>No booking data found</p>';
+        return;
+    }
+
+    const totalPrice = event.price * parseInt(bookingData.tickets);
+
+    summaryContainer.innerHTML = `
+        <h3>Booking Details</h3>
+        <div class="summary-item"><strong>Event:</strong> ${event.name}</div>
+        <div class="summary-item"><strong>Name:</strong> ${bookingData.name}</div>
+        <div class="summary-item"><strong>Email:</strong> ${bookingData.email}</div>
+        <div class="summary-item"><strong>Number of Tickets:</strong> ${bookingData.tickets}</div>
+        <div class="summary-item"><strong>Date:</strong> ${bookingData.date}</div>
+        <div class="summary-item"><strong>Total Price:</strong> <span style="color: #27ae60; font-size: 1.2rem;">Rs. ${totalPrice}</span></div>
+    `;
+}
+
+function initializePage() {
+    const path = window.location.pathname;
+    const page = path.substring(path.lastIndexOf('/') + 1);
+
+    switch(page) {
+        case 'events.html':
+            renderEvents();
+            setupFilters();
+            break;
+        case 'event-details.html':
+            displayEventDetails();
+            break;
+        case 'booking.html':
+            displayBookingSummary();
+            setupBookingForm();
+            break;
+        case 'confirmation.html':
+            displayConfirmation();
+            break;
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializePage);
+} else {
+    initializePage();
+}
+
+styles.css:
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #e0e0e0; background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%) fixed; background-size: cover; min-height: 100vh; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.navbar { background-color: rgba(15, 12, 41, 0.98); padding: 1rem 0; box-shadow: 0 4px 20px rgba(0,0,0,0.5); position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px); border-bottom: 2px solid rgba(52, 152, 219, 0.3); }
+.navbar .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { color: #fff; font-size: 1.8rem; font-weight: bold; cursor: pointer; transition: all 0.3s; text-shadow: 0 0 10px rgba(52, 152, 219, 0.5); }
+.logo:hover { color: #3498db; transform: scale(1.05); }
+.nav-links { display: flex; list-style: none; gap: 1.5rem; flex-wrap: wrap; }
+.nav-links a { color: #ecf0f1; text-decoration: none; transition: all 0.3s; padding: 0.5rem 1rem; border-radius: 5px; }
+.nav-links a:hover, .nav-links a.active { color: #3498db; background-color: rgba(52, 152, 219, 0.1); }
+.hero { background: linear-gradient(135deg, rgba(15, 12, 41, 0.85) 0%, rgba(48, 43, 99, 0.85) 100%), url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1600&q=80'); background-size: cover; background-position: center; background-attachment: fixed; color: #fff; padding: 120px 0; text-align: center; box-shadow: inset 0 0 100px rgba(0,0,0,0.5); }
+.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 0 4px 20px rgba(0,0,0,0.7); font-weight: 700; letter-spacing: 2px; }
+.hero p { font-size: 1.4rem; margin-bottom: 2.5rem; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+.btn { display: inline-block; padding: 12px 30px; text-decoration: none; border-radius: 5px; transition: all 0.3s; cursor: pointer; border: none; font-size: 1rem; }
+.btn-primary { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); color: #fff; box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4); }
+.btn-primary:hover { background: linear-gradient(135deg, #2980b9 0%, #1f6391 100%); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(52, 152, 219, 0.6); }
+.btn-secondary { background-color: #95a5a6; color: #fff; }
+.btn-secondary:hover { background-color: #7f8c8d; }
+.features { padding: 80px 0; background: rgba(20, 20, 40, 0.9); backdrop-filter: blur(10px); }
+.features h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.feature-card { background: rgba(30, 30, 60, 0.9); backdrop-filter: blur(10px); padding: 2rem; border-radius: 15px; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.4); transition: all 0.3s; border: 1px solid rgba(52, 152, 219, 0.2); }
+.feature-card:hover { transform: translateY(-10px); box-shadow: 0 12px 35px rgba(52, 152, 219, 0.4); border-color: rgba(52, 152, 219, 0.5); }
+.feature-icon { font-size: 3rem; margin-bottom: 1rem; }
+.feature-card h3 { font-size: 1.5rem; margin-bottom: 0.5rem; color: #3498db; }
+.events-section, .event-details, .booking-section, .confirmation-section { padding: 60px 0; min-height: calc(100vh - 200px); background: rgba(20, 20, 40, 0.9); backdrop-filter: blur(10px); }
+.events-section h1 { text-align: center; margin-bottom: 2rem; font-size: 2.5rem; color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+.filter-bar { display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap; }
+.filter-btn { padding: 10px 25px; border: 2px solid #3498db; background: #fff; color: #3498db; border-radius: 25px; cursor: pointer; transition: all 0.3s; font-size: 1rem; }
+.filter-btn:hover, .filter-btn.active { background-color: #3498db; color: #fff; }
+.events-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
+.event-card { background: rgba(30, 30, 60, 0.9); backdrop-filter: blur(10px); border-radius: 15px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.4); transition: all 0.3s; cursor: pointer; border: 1px solid rgba(52, 152, 219, 0.2); }
+.event-card:hover { transform: translateY(-10px); box-shadow: 0 12px 35px rgba(52, 152, 219, 0.4); border-color: rgba(52, 152, 219, 0.5); }
+.event-image { width: 100%; height: 200px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+.event-content { padding: 1.5rem; }
+.event-category { display: inline-block; padding: 5px 15px; background-color: #e8f4f8; color: #3498db; border-radius: 20px; font-size: 0.85rem; margin-bottom: 0.5rem; }
+.event-content h3 { font-size: 1.3rem; margin-bottom: 0.5rem; color: #fff; }
+.event-content p { color: #b0b0b0; margin-bottom: 1rem; }
+.event-price { font-size: 1.2rem; color: #27ae60; font-weight: bold; }
+.details-card { background: rgba(30, 30, 60, 0.9); backdrop-filter: blur(10px); border-radius: 15px; padding: 3rem; box-shadow: 0 8px 25px rgba(0,0,0,0.4); border: 1px solid rgba(52, 152, 219, 0.2); }
+.details-card h1 { font-size: 2.5rem; margin-bottom: 1rem; color: #fff; }
+.details-info { margin: 2rem 0; }
+.info-item { margin-bottom: 1rem; font-size: 1.1rem; }
+.info-item strong { color: #3498db; }
+.booking-section h1 { text-align: center; margin-bottom: 2rem; color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+.booking-card, .confirmation-card { background: rgba(30, 30, 60, 0.9); backdrop-filter: blur(10px); border-radius: 15px; padding: 2rem; box-shadow: 0 8px 25px rgba(0,0,0,0.4); max-width: 600px; margin: 0 auto; border: 1px solid rgba(52, 152, 219, 0.2); }
+.confirmation-card { padding: 3rem; text-align: center; }
+.event-summary { padding: 1.5rem; background-color: rgba(20, 20, 40, 0.8); border-radius: 8px; margin-bottom: 2rem; border: 1px solid rgba(52, 152, 219, 0.2); }
+.event-summary h2 { margin-bottom: 1rem; color: #fff; }
+.booking-form { display: flex; flex-direction: column; gap: 1.5rem; }
+.form-group { display: flex; flex-direction: column; }
+.form-group label { margin-bottom: 0.5rem; font-weight: 600; color: #e0e0e0; }
+.form-group input { padding: 12px; border: 2px solid rgba(52, 152, 219, 0.3); border-radius: 5px; font-size: 1rem; transition: all 0.3s; background-color: rgba(20, 20, 40, 0.6); color: #fff; }
+.form-group input:focus { outline: none; border-color: #3498db; box-shadow: 0 0 10px rgba(52, 152, 219, 0.5); }
+.error-message { color: #e74c3c; font-size: 0.9rem; margin-top: 0.5rem; display: block; }
+.success-icon { width: 80px; height: 80px; background-color: #27ae60; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto 2rem; }
+.confirmation-card h1 { color: #2ecc71; margin-bottom: 1rem; text-shadow: 0 2px 10px rgba(46, 204, 113, 0.5); }
+.booking-summary { background-color: rgba(20, 20, 40, 0.8); padding: 2rem; border-radius: 8px; margin: 2rem 0; text-align: left; border: 1px solid rgba(52, 152, 219, 0.2); }
+.booking-summary h3 { margin-bottom: 1rem; color: #fff; }
+.summary-item { padding: 0.5rem 0; border-bottom: 1px solid rgba(52, 152, 219, 0.2); color: #e0e0e0; }
+.summary-item:last-child { border-bottom: none; }
+.action-buttons { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap; }
+.footer { background-color: rgba(15, 12, 41, 0.98); backdrop-filter: blur(10px); color: #ecf0f1; padding: 2rem 0; text-align: center; margin-top: auto; border-top: 2px solid rgba(52, 152, 219, 0.3); }
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
+    .features-grid, .events-grid { grid-template-columns: 1fr; }
+    .filter-bar, .action-buttons { flex-direction: column; align-items: center; }
+}
+/* Style the date input container */
+.date-input-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Style the date input */
+#date {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    background-color: rgba(20, 20, 40, 0.6);
+    border: 2px solid rgba(52, 152, 219, 0.3);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+/* Add calendar icon */
+#date {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM7 12h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px;
+}
+
+/* Hide the default calendar icon */
+#date::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Focus state */
+#date:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TicketHub. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
